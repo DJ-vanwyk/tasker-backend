@@ -50,9 +50,6 @@ class Router
                 $controller = $this->delete[$request->path];
                 $controller->go();
                 break;
-            default:
-                # code...
-                break;
         }
     }
 }
