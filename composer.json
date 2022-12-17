@@ -3,7 +3,8 @@
     "classmap": [
       "app/classes",
       "app/controllers",
-      "app/models"
+      "app/models",
+      "app/views"
     ]
   }
 }

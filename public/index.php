@@ -3,8 +3,9 @@
 require '../vendor/autoload.php';
 require '../config/config.php';
 
-// $request = new Request();
+$request = new Request();
+$router = new Router();
 
-// $router = new Router();
+$router->get('/tasker/statuses', new StatusesController());
 
-// // $router->run($request);
+$router->run($request);

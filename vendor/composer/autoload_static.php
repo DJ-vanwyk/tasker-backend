@@ -11,7 +11,12 @@ class ComposerStaticInit34e26c180b5bbf3b3974d889e08c513e
         'Model' => __DIR__ . '/../..' . '/app/classes/model.php',
         'Request' => __DIR__ . '/../..' . '/app/classes/request.php',
         'Router' => __DIR__ . '/../..' . '/app/classes/router.php',
-        'TaskModel' => __DIR__ . '/../..' . '/app/models/tasks.model.php',
+        'StatusesController' => __DIR__ . '/../..' . '/app/controllers/statuses.controller.php',
+        'StatusesModel' => __DIR__ . '/../..' . '/app/models/statuses.model.php',
+        'StatusesView' => __DIR__ . '/../..' . '/app/views/statuses.view.php',
+        'TasksModel' => __DIR__ . '/../..' . '/app/models/tasks.model.php',
+        'UsersModel' => __DIR__ . '/../..' . '/app/models/users.model.php',
+        'View' => __DIR__ . '/../..' . '/app/classes/view.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

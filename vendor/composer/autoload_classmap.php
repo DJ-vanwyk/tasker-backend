@@ -10,5 +10,10 @@ return array(
     'Model' => $baseDir . '/app/classes/model.php',
     'Request' => $baseDir . '/app/classes/request.php',
     'Router' => $baseDir . '/app/classes/router.php',
-    'TaskModel' => $baseDir . '/app/models/tasks.model.php',
+    'StatusesController' => $baseDir . '/app/controllers/statuses.controller.php',
+    'StatusesModel' => $baseDir . '/app/models/statuses.model.php',
+    'StatusesView' => $baseDir . '/app/views/statuses.view.php',
+    'TasksModel' => $baseDir . '/app/models/tasks.model.php',
+    'UsersModel' => $baseDir . '/app/models/users.model.php',
+    'View' => $baseDir . '/app/classes/view.php',
 );
