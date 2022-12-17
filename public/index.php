@@ -1,13 +1,15 @@
 <?php
 
-include './classes/request.php';
-include './classes/controller.php';
-include './classes/router.php';
-include './controllers/users.php';
-include './controllers/tasks.php';
+require '../vendor/autoload.php';
+require '../config/config.php';
+require '../app/models/tasker.php';
 
-$request = new Request();
+$taskModel = new TaskModel();
 
-$router = new Router();
+var_dump($taskModel->getRecords());
 
-$router->run($request);
+// $request = new Request();
+
+// $router = new Router();
+
+// // $router->run($request);
