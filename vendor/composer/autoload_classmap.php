@@ -10,4 +10,5 @@ return array(
     'Model' => $baseDir . '/app/classes/model.php',
     'Request' => $baseDir . '/app/classes/request.php',
     'Router' => $baseDir . '/app/classes/router.php',
+    'TaskModel' => $baseDir . '/app/models/tasks.model.php',
 );
