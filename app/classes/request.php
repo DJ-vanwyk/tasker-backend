@@ -4,6 +4,7 @@ class Request
 {
     public $cookies;
     public $path;
+    public $path_segments;
     public $body;
     public $params;
     public $headers;
@@ -11,23 +12,21 @@ class Request
 
     function __construct()
     {
-        $this->cookies = $_COOKIE;
-        $this->body = file_get_contents('php://input');
-        $parsed_url = parse_url($_SERVER['REQUEST_URI']);
-        $this->path = $parsed_url['path'];
         $this->params = $_GET;
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->headers = getallheaders();
-    }
+        $this->cookies = $_COOKIE;
+        $this->body = file_get_contents('php://input');
 
-    // function get_path()
-    // {
-    //     $parsed_url = parse_url($_SERVER['REQUEST_URI']);
-    //     $path = explode('/', $parsed_url['path']);
-    //     array_shift($path);
-    //     if ($path[count($path) - 1] === '') {
-    //         array_pop($path);
-    //     }
-    //     return $path;
-    // }
+        // Extract the path and params from the request
+        $parsed_url = parse_url($_SERVER['REQUEST_URI']);
+        $this->path = $parsed_url['path'];
+        // Parse the path into segments
+        $this->path_segments = explode('/', $this->path);
+        array_shift($this->path_segments);
+        // Remove the last element if it is empty
+        if ($this->path_segments[count($this->path_segments) - 1] == '') {
+            array_pop($this->path_segments);
+        }
+    }
 }

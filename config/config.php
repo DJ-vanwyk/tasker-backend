@@ -1,5 +1,8 @@
 <?php
 
+//App Root
+define('ROOT', '/tasker');
+
 //Database Info
 define('DB_HOST', 'localhost');
 define('DB_USER', 'dev');
