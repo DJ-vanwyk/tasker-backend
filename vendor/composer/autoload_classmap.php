@@ -7,10 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Controller' => $baseDir . '/app/classes/controller.php',
+    'DeleteTasksController' => $baseDir . '/app/controllers/deleteTask.controller.php',
+    'GetTasksController' => $baseDir . '/app/controllers/getTasks.controller.php',
     'Model' => $baseDir . '/app/classes/model.php',
+    'PostTasksController' => $baseDir . '/app/controllers/postTasks.controller.php',
+    'PutTasksController' => $baseDir . '/app/controllers/putTask.controller.php',
     'Request' => $baseDir . '/app/classes/request.php',
     'Router' => $baseDir . '/app/classes/router.php',
-    'StatusesController' => $baseDir . '/app/controllers/statuses.controller.php',
     'StatusesModel' => $baseDir . '/app/models/statuses.model.php',
     'StatusesView' => $baseDir . '/app/views/statuses.view.php',
     'TasksModel' => $baseDir . '/app/models/tasks.model.php',
