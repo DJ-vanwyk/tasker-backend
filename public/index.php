@@ -25,5 +25,9 @@ $router->delete('/api/tasks/[0-9]+', new DeleteTasksController());
 // $router->put('/api/statuses/[0-9]+', new PutStatusesController());
 // $router->delete('/api/statuses/[0-9]+', new DeleteStatusesController());
 
+// Auth routes
+$router->post('/api/login', new LoginController());
+$router->post('/api/logout', new LogoutController());
+
 // Run the router
 $router->run($request);
