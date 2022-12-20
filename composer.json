@@ -6,8 +6,5 @@
       "app/models",
       "app/views"
     ]
-  },
-  "require": {
-    "firebase/php-jwt": "^6.3"
   }
 }

@@ -8,6 +8,13 @@ require '../config/config.php';
 $request = new Request();
 $router = new Router();
 
+// Auth middleware
+if (!isset($_SESSION['user']) and $request->path != ROOT . '/api/login') {
+    http_response_code(401);
+    echo 'Unauthorized';
+    exit();
+}
+
 // Routes
 // tasks routes
 $router->get('/api/tasks', new GetTasksController());
@@ -21,11 +28,11 @@ $router->delete('/api/tasks/[0-9]+', new DeleteTasksController());
 // $router->put('/api/users/[0-9]+', new PutUsersController());
 // $router->delete('/api/users/[0-9]+', new DeleteUsersController());
 
-// // statuses routes
-// $router->get('/api/statuses', new GetStatusesController());
-// $router->post('/api/statuses', new PostStatusesController());
-// $router->put('/api/statuses/[0-9]+', new PutStatusesController());
-// $router->delete('/api/statuses/[0-9]+', new DeleteStatusesController());
+// statuses routes
+$router->get('/api/statuses', new GetStatusesController());
+$router->post('/api/statuses', new PostStatusesController());
+$router->put('/api/statuses/[0-9]+', new PutStatusesController());
+$router->delete('/api/statuses/[0-9]+', new DeleteStatusesController());
 
 // Auth routes
 $router->post('/api/login', new LoginController());
