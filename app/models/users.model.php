@@ -17,4 +17,14 @@ class UsersModel extends Model
         $user = mysqli_fetch_assoc($results);
         return $user;
     }
+
+    public function create_user($username, $password)
+    {
+        // Hash the password
+        $hashed_pass = password_hash($password, PASSWORD_BCRYPT);
+        // Insert the user into the database
+        $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_pass')";
+        $results = mysqli_query($this->db, $sql);
+        return $results;
+    }
 }

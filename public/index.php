@@ -24,7 +24,7 @@ $router->delete('/api/tasks/[0-9]+', new DeleteTasksController());
 
 // // users routes
 // $router->get('/api/users', new GetUsersController());
-// $router->post('/api/users', new PostUsersController());
+$router->post('/api/users', new PostUsersController());
 // $router->put('/api/users/[0-9]+', new PutUsersController());
 // $router->delete('/api/users/[0-9]+', new DeleteUsersController());
 
