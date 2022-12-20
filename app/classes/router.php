@@ -39,6 +39,7 @@ class Router
             // If the path matches, run the controller
             if (preg_match("#^$pattern$#", $request->path)) {
                 $path_found = true;
+                $controller->set_request($request);
                 $controller->go();
                 break;
             }

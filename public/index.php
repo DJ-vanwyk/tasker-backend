@@ -1,6 +1,5 @@
 <?php
 
-var_dump($_SESSION);
 require '../vendor/autoload.php';
 require '../config/config.php';
 
