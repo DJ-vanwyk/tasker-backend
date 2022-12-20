@@ -9,4 +9,12 @@ class UsersModel extends Model
         $users = mysqli_fetch_all($results, MYSQLI_ASSOC);
         return $users;
     }
+
+    public function get_user_by_username($username)
+    {
+        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $results = mysqli_query($this->db, $sql);
+        $user = mysqli_fetch_assoc($results);
+        return $user;
+    }
 }

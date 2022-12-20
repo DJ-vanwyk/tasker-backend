@@ -4,6 +4,7 @@ class LogoutController extends Controller
 {
     public function go()
     {
-        echo 'LogoutController';
+        session_destroy();
+        echo 'Loged Out';
     }
 }
