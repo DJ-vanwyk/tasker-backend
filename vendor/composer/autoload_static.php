@@ -12,6 +12,7 @@ class ComposerStaticInit34e26c180b5bbf3b3974d889e08c513e
         'DeleteStatusesController' => __DIR__ . '/../..' . '/app/controllers/statuses/deleteStatuses.controller.php',
         'DeleteTasksController' => __DIR__ . '/../..' . '/app/controllers/tasks/deleteTask.controller.php',
         'GetStatusesController' => __DIR__ . '/../..' . '/app/controllers/statuses/getStatuses.controller.php',
+        'GetTaskController' => __DIR__ . '/../..' . '/app/controllers/tasks/getTask.controller.php',
         'GetTasksController' => __DIR__ . '/../..' . '/app/controllers/tasks/getTasks.controller.php',
         'GetUsersController' => __DIR__ . '/../..' . '/app/controllers/users/getUsers.controller.php',
         'LoginController' => __DIR__ . '/../..' . '/app/controllers/auth/login.controller.php',

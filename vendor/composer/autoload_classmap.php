@@ -11,6 +11,7 @@ return array(
     'DeleteStatusesController' => $baseDir . '/app/controllers/statuses/deleteStatuses.controller.php',
     'DeleteTasksController' => $baseDir . '/app/controllers/tasks/deleteTask.controller.php',
     'GetStatusesController' => $baseDir . '/app/controllers/statuses/getStatuses.controller.php',
+    'GetTaskController' => $baseDir . '/app/controllers/tasks/getTask.controller.php',
     'GetTasksController' => $baseDir . '/app/controllers/tasks/getTasks.controller.php',
     'GetUsersController' => $baseDir . '/app/controllers/users/getUsers.controller.php',
     'LoginController' => $baseDir . '/app/controllers/auth/login.controller.php',

@@ -18,6 +18,7 @@ if (!isset($_SESSION['user']) and $request->path != ROOT . '/api/login') {
 // Routes
 // tasks routes
 $router->get('/api/tasks', new GetTasksController());
+$router->get('/api/tasks/[0-9]+', new GetTaskController());
 $router->post('/api/tasks', new PostTasksController());
 $router->put('/api/tasks/[0-9]+', new PutTasksController());
 $router->delete('/api/tasks/[0-9]+', new DeleteTasksController());
