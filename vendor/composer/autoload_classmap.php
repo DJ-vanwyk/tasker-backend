@@ -24,6 +24,7 @@ return array(
     'PutTasksController' => $baseDir . '/app/controllers/tasks/putTask.controller.php',
     'PutUsersController' => $baseDir . '/app/controllers/users/putUsers.controller.php',
     'Request' => $baseDir . '/app/classes/request.php',
+    'Response' => $baseDir . '/app/classes/response.php',
     'Router' => $baseDir . '/app/classes/router.php',
     'StatusesModel' => $baseDir . '/app/models/statuses.model.php',
     'StatusesView' => $baseDir . '/app/views/statuses.view.php',

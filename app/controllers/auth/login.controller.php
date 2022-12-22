@@ -7,8 +7,8 @@ class LoginController extends Controller
         $body = json_decode($this->request->body, true);
 
         if (!isset($body['username']) or !isset($body['password'])) {
-            http_response_code(400);
-            echo json_encode(['error' => 'Missing username or password']);
+            $response = new Response(400, 'Bad request');
+            $response->send_json();
             exit();
         }
 
@@ -18,14 +18,15 @@ class LoginController extends Controller
         if ($user) {
             if (password_verify($body['password'], $user['password'])) {
                 $_SESSION['user'] = $user;
-                unset($user['password']);
-                header('Content-Type: application/json');
-                echo json_encode($user);
+                $response = new Response(200, 'Logged in', $user);
+                $response->send_json();
             } else {
-                echo 'Wrong password';
+                $response = new Response(401, 'Unauthorized');
+                $response->send_json();
             }
         } else {
-            echo 'User not found';
+            $response = new Response(404, 'User not found');
+            $response->send_json();
         }
     }
 }

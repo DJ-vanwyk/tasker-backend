@@ -4,6 +4,9 @@ session_start();
 
 require '../vendor/autoload.php';
 require '../config/config.php';
+require '../app/scripts/cors.php';
+
+cors();
 
 $request = new Request();
 $router = new Router();

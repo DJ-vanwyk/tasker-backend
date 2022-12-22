@@ -25,6 +25,7 @@ class ComposerStaticInit34e26c180b5bbf3b3974d889e08c513e
         'PutTasksController' => __DIR__ . '/../..' . '/app/controllers/tasks/putTask.controller.php',
         'PutUsersController' => __DIR__ . '/../..' . '/app/controllers/users/putUsers.controller.php',
         'Request' => __DIR__ . '/../..' . '/app/classes/request.php',
+        'Response' => __DIR__ . '/../..' . '/app/classes/response.php',
         'Router' => __DIR__ . '/../..' . '/app/classes/router.php',
         'StatusesModel' => __DIR__ . '/../..' . '/app/models/statuses.model.php',
         'StatusesView' => __DIR__ . '/../..' . '/app/views/statuses.view.php',
