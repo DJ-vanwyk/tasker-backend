@@ -6,7 +6,7 @@ class GetTasksController extends Controller
     {
         $model = new TasksModel();
         $tasks = $model->get_all_records();
-        header('Content-Type: application/json');
-        echo json_encode($tasks);
+        $response = new Response(200, "Tasks retrieved", $tasks);
+        $response->send_json();
     }
 }
