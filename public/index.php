@@ -31,7 +31,7 @@ $router->get('/api/users', new GetUsersController());
 $router->get('/api/users/[0-9]+', new GetUserController());
 $router->post('/api/users', new PostUsersController());
 $router->put('/api/users/[0-9]+', new PutUsersController());
-// $router->delete('/api/users/[0-9]+', new DeleteUsersController());
+$router->delete('/api/users/[0-9]+', new DeleteUserController());
 
 // statuses routes
 $router->get('/api/statuses', new GetStatusesController());
