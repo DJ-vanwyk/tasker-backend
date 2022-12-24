@@ -35,4 +35,12 @@ class StatusesModel extends Model
         $results = mysqli_query($this->db, $sql_query);
         return $results;
     }
+
+    public function get_status_by_id($status_id)
+    {
+        $sql_query = "SELECT * FROM statuses WHERE status_id = $status_id";
+        $results = mysqli_query($this->db, $sql_query);
+        $status = mysqli_fetch_assoc($results);
+        return $status;
+    }
 }

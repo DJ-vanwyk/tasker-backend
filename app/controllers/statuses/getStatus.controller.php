@@ -1,0 +1,13 @@
+<?php
+
+class GetStatusController extends Controller
+{
+    public function go()
+    {
+        $model = new StatusesModel();
+        $id = $this->request->path_segments[count($this->request->path_segments) - 1];
+        $status = $model->get_status_by_id($id);
+        $response = new Response(200, "OK", $status);
+        $response->send_json();
+    }
+}
