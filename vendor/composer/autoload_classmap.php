@@ -10,6 +10,7 @@ return array(
     'Controller' => $baseDir . '/app/classes/controller.php',
     'DeleteStatusesController' => $baseDir . '/app/controllers/statuses/deleteStatuses.controller.php',
     'DeleteTasksController' => $baseDir . '/app/controllers/tasks/deleteTask.controller.php',
+    'GetStatusController' => $baseDir . '/app/controllers/statuses/getStatus.controller.php',
     'GetStatusesController' => $baseDir . '/app/controllers/statuses/getStatuses.controller.php',
     'GetTaskController' => $baseDir . '/app/controllers/tasks/getTask.controller.php',
     'GetTasksController' => $baseDir . '/app/controllers/tasks/getTasks.controller.php',
