@@ -30,6 +30,7 @@ class PutTasksController extends Controller
             $body['assigned_to'],
             $body['due_date']
         );
-        echo 'Task updated';
+        $response = new Response(204, "No Content");
+        $response->send_json();
     }
 }
