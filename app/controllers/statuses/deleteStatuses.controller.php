@@ -13,6 +13,7 @@ class DeleteStatusesController extends Controller
 
         $result = $model->delete_status_by_id($id);
 
-        echo "Record with id $id was deleted";
+        $response = new Response(200, "Not data");
+        $response->send_json();
     }
 }
