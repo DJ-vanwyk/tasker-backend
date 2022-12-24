@@ -18,7 +18,7 @@ class GetTaskController extends Controller
             exit();
         }
         // Return the task
-        header('Content-Type: application/json');
-        echo json_encode($task);
+        $response = new Response(200, "Task Found", $task);
+        $response->send_json();
     }
 }
