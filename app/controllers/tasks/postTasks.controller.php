@@ -24,6 +24,7 @@ class PostTasksController extends Controller
             $body['due_date']
         );
 
-        echo 'Task created with id: ' . $id;
+        $response = new Response(201, "Task created");
+        $response->send_json();
     }
 }
