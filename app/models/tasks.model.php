@@ -43,4 +43,10 @@ class TasksModel extends Model
         $task = mysqli_fetch_assoc($results);
         return $task;
     }
+
+    function delete_record_by_id($id)
+    {
+        $sql = "DELETE FROM tasks WHERE task_id = $id";
+        mysqli_query($this->db, $sql);
+    }
 }
