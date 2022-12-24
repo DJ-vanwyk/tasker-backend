@@ -4,7 +4,16 @@ class TasksModel extends Model
 {
     function get_all_records()
     {
-        $sql = 'SELECT * FROM tasks';
+        $sql = 'SELECT tasks.task_id AS task_id, tasks.description AS description,
+        users.username AS assigned_to,
+        statuses.name AS status,
+        tasks.due_date AS due_date,
+        tasks.created_at AS created_at,
+        tasks.updated_at AS updated_at
+    FROM
+        tasks
+    INNER JOIN users ON tasks.assigned_to = users.user_id
+    INNER JOIN statuses ON tasks.status = statuses.status_id;';
         $results = mysqli_query($this->db, $sql);
         $tasks = mysqli_fetch_all($results, MYSQLI_ASSOC);
         return $tasks;
