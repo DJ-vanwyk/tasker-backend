@@ -28,7 +28,7 @@ class PostStatusesController extends Controller
         }
 
         // return the new status id
-        header('Content-Type: application/json');
-        echo json_encode(['id' => $result]);
+        $response = new Response(201, "Created");
+        $response->send_json();
     }
 }
