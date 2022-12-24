@@ -36,4 +36,19 @@ class UsersModel extends Model
         $results = mysqli_query($this->db, $sql);
         return $results;
     }
+
+    public function delete_user($user_id)
+    {
+        $sql = "DELETE FROM users WHERE user_id = $user_id";
+        $results = mysqli_query($this->db, $sql);
+        return $results;
+    }
+
+    public function get_user_by_id($user_id)
+    {
+        $sql = "SELECT * FROM users WHERE user_id = $user_id";
+        $results = mysqli_query($this->db, $sql);
+        $user = mysqli_fetch_assoc($results);
+        return $user;
+    }
 }

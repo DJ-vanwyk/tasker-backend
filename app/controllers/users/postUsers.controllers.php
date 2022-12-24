@@ -29,6 +29,7 @@ class PostUsersController extends Controller
             exit();
         }
 
-        echo 'User created';
+        $response = new Response(201, "Not data");
+        $response->send_json();
     }
 }

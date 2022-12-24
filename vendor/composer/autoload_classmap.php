@@ -14,6 +14,7 @@ return array(
     'GetStatusesController' => $baseDir . '/app/controllers/statuses/getStatuses.controller.php',
     'GetTaskController' => $baseDir . '/app/controllers/tasks/getTask.controller.php',
     'GetTasksController' => $baseDir . '/app/controllers/tasks/getTasks.controller.php',
+    'GetUserController' => $baseDir . '/app/controllers/users/getUser.controller.php',
     'GetUsersController' => $baseDir . '/app/controllers/users/getUsers.controller.php',
     'LoginController' => $baseDir . '/app/controllers/auth/login.controller.php',
     'LogoutController' => $baseDir . '/app/controllers/auth/logout.controller.php',

@@ -28,6 +28,7 @@ class PutUsersController extends Controller
             exit();
         }
 
-        echo 'User updated with id: ' . $user_id . '';
+        $response = new Response(201, "Not data");
+        $response->send_json();
     }
 }
