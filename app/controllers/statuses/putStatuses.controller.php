@@ -20,7 +20,7 @@ class PutStatusesController extends Controller
                 count($this->request->path_segments) - 1
             ];
         try {
-            $statuse = $model->update_status_by_id($id, $name);
+            $status = $model->update_status_by_id($id, $name);
         } catch (Exception $e) {
             // if there is an error, return the error message
             echo $e->getMessage();
@@ -28,6 +28,7 @@ class PutStatusesController extends Controller
             exit();
         }
         // Set the header to JSON
-        echo "Record with id $id was updated to $name";
+        $response = new Response(201, "Not data",);
+        $response->send_json();
     }
 }
