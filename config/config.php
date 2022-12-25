@@ -1,10 +1,10 @@
 <?php
 
 //App Root
-define('ROOT', '/tasker');
+define('ROOT', '/api');
 
 //Database Info
-define('DB_HOST', 'localhost');
-define('DB_USER', 'dev');
-define('DB_PASSWORD', '123456');
-define('DB_NAME', 'tasker');
+define('DB_HOST', $_ENV['DB_HOST']);
+define('DB_USER', $_ENV['DB_USER']);
+define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
+define('DB_NAME', $_ENV['DB_NAME']);

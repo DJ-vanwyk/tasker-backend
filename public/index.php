@@ -12,7 +12,7 @@ $request = new Request();
 $router = new Router();
 
 // Auth middleware
-if (!isset($_SESSION['user']) and $request->path != ROOT . '/api/login') {
+if (!isset($_SESSION['user']) and $request->path != ROOT . '/login') {
     http_response_code(401);
     echo 'Unauthorized';
     exit();
@@ -20,29 +20,29 @@ if (!isset($_SESSION['user']) and $request->path != ROOT . '/api/login') {
 
 // Routes
 // tasks routes
-$router->get('/api/tasks', new GetTasksController());
-$router->get('/api/tasks/[0-9]+', new GetTaskController());
-$router->post('/api/tasks', new PostTasksController());
-$router->put('/api/tasks/[0-9]+', new PutTasksController());
-$router->delete('/api/tasks/[0-9]+', new DeleteTasksController());
+$router->get('/tasks', new GetTasksController());
+$router->get('/tasks/[0-9]+', new GetTaskController());
+$router->post('/tasks', new PostTasksController());
+$router->put('/tasks/[0-9]+', new PutTasksController());
+$router->delete('/tasks/[0-9]+', new DeleteTasksController());
 
 // // users routes
-$router->get('/api/users', new GetUsersController());
-$router->get('/api/users/[0-9]+', new GetUserController());
-$router->post('/api/users', new PostUsersController());
-$router->put('/api/users/[0-9]+', new PutUsersController());
-$router->delete('/api/users/[0-9]+', new DeleteUserController());
+$router->get('/users', new GetUsersController());
+$router->get('/users/[0-9]+', new GetUserController());
+$router->post('/users', new PostUsersController());
+$router->put('/users/[0-9]+', new PutUsersController());
+$router->delete('/users/[0-9]+', new DeleteUserController());
 
 // statuses routes
-$router->get('/api/statuses', new GetStatusesController());
-$router->get('/api/statuses/[0-9]+', new GetStatusController());
-$router->post('/api/statuses', new PostStatusesController());
-$router->put('/api/statuses/[0-9]+', new PutStatusesController());
-$router->delete('/api/statuses/[0-9]+', new DeleteStatusesController());
+$router->get('/statuses', new GetStatusesController());
+$router->get('/statuses/[0-9]+', new GetStatusController());
+$router->post('/statuses', new PostStatusesController());
+$router->put('/statuses/[0-9]+', new PutStatusesController());
+$router->delete('/statuses/[0-9]+', new DeleteStatusesController());
 
 // Auth routes
-$router->post('/api/login', new LoginController());
-$router->post('/api/logout', new LogoutController());
+$router->post('/login', new LoginController());
+$router->post('/logout', new LogoutController());
 
 // Run the router
 $router->run($request);
